@@ -27,7 +27,7 @@ module OmniAuth
       end
 
       def get_credentials
-        OmniAuth::Form.build(consumer_options[:title] || "xAuth Credentials") do
+        OmniAuth::Form.build(:title => consumer_options[:title] || "xAuth Credentials") do
           text_field 'Username', 'username'
           password_field 'Password', 'password'
         end.to_response
